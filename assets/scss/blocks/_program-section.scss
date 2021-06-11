@@ -54,4 +54,52 @@
     line-height: 21.5px;
     max-width: 530px;
   }
+
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__box {
+      width: 100%;
+      height: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__date {
+      flex-shrink: 0;
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &__day {
+      @include text-style(6rem, 400, $main-color);
+      line-height: 72px;
+    }
+
+    &__month {
+      @include text-style(1.4rem, 400, $main-color);
+      line-height: 16.7px;
+    }
+
+    &__title {
+      @include text-style(1.8rem, 700, $white-color);
+      line-height: 17.2px;
+      margin-bottom: 12px;
+    }
+
+    &__subtitle {
+      @include text-style(1.4rem, 400, rgba($white-color, .6));
+      line-height: 16.7px;
+      max-width: unset;
+    }
+  }
 }

@@ -65,6 +65,12 @@
       transform: rotate(90deg) translate(80px, 62px);
     }
 
+    &--second {
+      span {
+        transform: rotate(90deg) translate(90px, 70px);
+      }
+    }
+
     &--top200 {
       top: 200px;
     }
@@ -88,5 +94,106 @@
     position: absolute;
     left: -100px;
     bottom: -90px;
+  }
+
+  @include respond(tab-land) {
+    &__row {
+      align-items: flex-start;
+      flex-direction: column;
+
+      &--reverse {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__title {
+      margin-bottom: 30px;
+
+      &--mt50 {
+        margin-top: 0;
+      }
+    }
+
+    &__img-box {
+      &--first {
+        margin-left: auto;
+      }
+      &--second {
+        margin-right: auto;
+      }
+    }
+
+    &__info {
+      &--first {
+        margin-bottom: 70px;
+      }
+
+      &--second {
+        margin-top: 30px;
+      }
+    }
+
+    &__address {
+      top: 70px;
+
+      &--top200 {
+        top: 70px;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__row {
+      &--reverse {
+
+        #{$e}__num {
+          top: -67px;
+          right: -44px;
+        }
+      }
+    }
+
+    &__title {
+      @include text-style(2.2rem, 400, $white-color);
+      line-height: 21px;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      @include text-style(1.4rem, 400, $white-color);
+      line-height: 16.7px;
+      padding-left: 45px;
+      max-width: unset;
+    }
+
+    &__address {
+      top: 50px;
+
+      &--top200 {
+        top: 50px;
+      }
+    }
+
+    &__img-box {
+      flex-shrink: 0;
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    &__num {
+      width: 168px;
+      height: 168px;
+      @include text-style(6.2rem, 400, $main-color);
+
+      position: absolute;
+      left: -44px;
+      bottom: -67px;
+    }
+
   }
 }

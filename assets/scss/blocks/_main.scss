@@ -1,5 +1,6 @@
 .main {
   padding-bottom: 160px;
+  overflow-x: hidden;
 
   &__section {
     &:not(:last-child) {
@@ -9,5 +10,19 @@
 
   &__about-section {
     margin-bottom: 100px;
+  }
+
+  @include respond(phone) {
+    padding-bottom: 100px;
+
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: 100px;
+      }
+    }
+
+    &__about-section {
+      margin-bottom: 80px;
+    }
   }
 }

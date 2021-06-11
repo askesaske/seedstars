@@ -25,11 +25,13 @@
 @import "blocks/organizers-section";
 @import "blocks/place-section";
 @import "blocks/footer";
+@import "blocks/sidebar";
+@import "blocks/modal";
 
 html, body {
   font-size: 62.5%;
   font-family: $sf-pro;
-  background-color: #161616;
+  background-color: #212121;
   //scroll-behavior: smooth;
 }
 

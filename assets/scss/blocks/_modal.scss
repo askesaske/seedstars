@@ -1,0 +1,114 @@
+.modal {
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #161616;
+    width: 800px;
+    height: 596px;
+    padding: 70px;
+  }
+
+  &__close {
+    position: absolute;
+    cursor: pointer;
+    top: 40px;
+    right: 40px;
+  }
+
+  &__title {
+    @include text-style(3rem, 700, $white-color);
+    line-height: 34px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include text-style(1.8rem, 500, $white-color);
+    line-height: 21.5px;
+    text-align: center;
+    max-width: 542px;
+    margin: 0 auto 30px;
+  }
+
+  &__input-list {
+    margin-bottom: 60px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #FFFFFF;
+    @include text-style(1.8rem, 500, $white-color);
+    background-color: transparent;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    width: 285px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include respond(phone) {
+    padding: 0 15px;
+
+    &__wrapper {
+      width: calc(100% - 30px);
+      height: unset;
+      padding: 40px;
+    }
+
+    &__close {
+      top: 20px;
+      right: 20px;
+    }
+
+    &__title {
+      @include text-style(2rem, 700, $white-color);
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      @include text-style(1.4rem, 500, $white-color);
+      line-height: 16px;
+      max-width: unset;
+      margin-bottom: 20px;
+    }
+
+    &__input-list {
+      margin-bottom: 40px;
+    }
+
+    &__input {
+      padding: 15px 20px;
+      @include text-style(1.4rem, 500, $white-color);
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      height: 46px;
+    }
+  }
+
+}

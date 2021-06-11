@@ -72,5 +72,61 @@
     }
   }
 
+  @include respond(tab-land) {
+    &__address-box {
+      right: 60px;
+    }
+  }
 
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+      width: 255px;
+      height: 46px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__map {
+      height: 400px;
+
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+
+    &__address-box {
+      width: 211px;
+      height: unset;
+      min-height: 103px;
+      bottom: 40px;
+      right: 15px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    &__row {
+
+      svg {
+        flex-shrink: 0;
+        margin-top: 5px;
+        margin-right: 10px;
+      }
+
+      span {
+        @include text-style(1.4rem, 400, $white-color);
+        line-height: 18px;
+      }
+    }
+  }
 }

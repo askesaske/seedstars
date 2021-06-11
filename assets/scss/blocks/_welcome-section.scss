@@ -1,9 +1,10 @@
 .welcome-section {
-  height: calc(100vh - 70px);
+  padding-top: 70px;
+  height: 100vh;
   background-image: url("../assets/img/neuro-pattern.svg");
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 20px;
+  background-position-y: 90px;
 
   &__container {
     @extend %container;
@@ -104,6 +105,9 @@
 
 
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 796px;
     height: 50px;
     @include text-style(2.2rem, 500, #1e1e1e);
@@ -121,12 +125,135 @@
     &:after {
       content: 'HACKATHON';
       @include text-style(14.4rem, 400, transparent);
+      font-family: $bebas;
       letter-spacing: 0.155em;
       line-height: 173px;
       -webkit-text-stroke: 2px $white-color;
       position: absolute;
       top: 77px;
       left: 52%;
+    }
+  }
+
+  @include respond(tab-land) {
+    height: unset;
+    background-image: url("../assets/img/neuro-pattern.svg");
+    background-position-x: center;
+    background-position-y: 250px;
+    padding-top: 110px;
+
+    &__socials {
+      top: 25%;
+    }
+
+    &__date {
+      top: 0;
+    }
+
+    &__countdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+
+    &__btn {
+      width: 650px;
+      margin-bottom: 20px;
+    }
+
+    &__heading {
+      @include text-style(10rem, 700, $main-color);
+      line-height: 150px;
+      letter-spacing: 0.122em;
+      margin-left: -180px;
+
+      &:after {
+        content: 'HACKATHON';
+        @include text-style(10rem, 400, transparent);
+        letter-spacing: 0.122em;
+        line-height: 120px;
+        top: 60px;
+        left: 52%;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    background-position-y: 250px;
+    background-size: 268px 264px;
+
+    &__socials {
+      left: 15px;
+    }
+
+    &__date {
+      display: none;
+    }
+
+    &__social {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__countdown {
+      margin-bottom: 18px;
+    }
+
+    &__time-wrapper {
+      margin-bottom: 10px;
+    }
+
+    &__time-box {
+      width: 80px;
+      height: 92px;
+
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+
+    &__number {
+      @include text-style(6rem, 400, $white-color);
+      letter-spacing: 60px;
+    }
+
+    &__time-text {
+      @include text-style(1.4rem, 400, $white-color);
+    }
+
+
+    &__btn {
+      width: 100%;
+      height: 46px;
+      @include text-style(1.8rem, 500, #1e1e1e);
+      margin-bottom: 14px;
+    }
+
+    &__heading {
+      @include text-style(5rem, 700, $main-color);
+      line-height: 74px;
+      letter-spacing: 0.155em;
+      margin-left: -55px;
+
+      &:after {
+        content: 'HACKATHON';
+        @include text-style(5rem, 400, transparent);
+        letter-spacing: 0.155em;
+        line-height: 60px;
+        -webkit-text-stroke: .5px $white-color;
+        top: 30px;
+        left: 34%;
+      }
     }
   }
 }

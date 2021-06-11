@@ -92,9 +92,9 @@
           </vue-count-down>
         </no-ssr>
 
-        <button class="welcome-section__btn button">
+        <a href="https://form.jotform.com/211601184592451" class="welcome-section__btn button">
           Принять участие
-        </button>
+        </a>
 
         <p class="welcome-section__heading">
           БЛОКЧЕЙН
@@ -103,7 +103,7 @@
 
     </section>
 
-    <section class="main__section prize-section">
+    <section class="main__section prize-section" id="prize">
 
       <div class="prize-section__container">
 
@@ -160,7 +160,7 @@
             <h5 class="prize-section__title">Инвестирование в блокчейн проекты</h5>
             <p class="prize-section__text">
               По итогам мероприятия список проектов будет передан в инвестиционный совет для рассмотрения на возможность
-              грантовой и инвестиционной поддержке для развития продукта
+              грантовой и инвестиционной поддержки для развития продукта
             </p>
           </div>
 
@@ -170,7 +170,7 @@
 
     </section>
 
-    <section class="main__about-section about-section">
+    <section class="main__about-section about-section" id="about">
 
       <div class="about-section__container">
 
@@ -318,7 +318,7 @@
       </div>
     </section>
 
-    <section class="main__section task-section">
+    <section class="main__section task-section" id="task">
 
       <div class="task-section__container">
 
@@ -359,13 +359,13 @@
 
     </section>
 
-    <section class="main__section audience-section">
+    <section class="main__section audience-section" id="audience">
 
       <div class="audience-section__container">
 
         <div class="audience-section__heading heading-medium">
-          <h2 class="heading-medium__white">Целевая аудитория</h2>
-          <h2 class="heading-medium__outlined">Целевая аудитория</h2>
+          <h2 class="heading-medium__white">Целевая <br> аудитория</h2>
+          <h2 class="heading-medium__outlined">Целевая <br> аудитория</h2>
         </div>
 
         <div class="audience-section__subtitle">
@@ -388,7 +388,7 @@
 
     </section>
 
-    <section class="main__section program-section">
+    <section class="main__section program-section" id="program">
 
       <div class="program-section__container">
 
@@ -489,7 +489,7 @@
 
     </section>
 
-    <section class="main__section organizers-section">
+    <section class="main__section organizers-section" id="organizers">
 
       <div class="organizers-section__container">
 
@@ -499,7 +499,7 @@
         </div>
 
         <div class="organizers-section__row">
-          <div class="organizers-section__info">
+          <div class="organizers-section__info organizers-section__info--first">
             <div class="organizers-section__title organizers-section__title--mt50">
               SEEDSTARS
             </div>
@@ -518,7 +518,7 @@
             </div>
           </div>
 
-          <div class="organizers-section__img-box">
+          <div class="organizers-section__img-box organizers-section__img-box--first">
             <img src="../assets/img/seedstars.png" alt="" class="organizers-section__img">
             <div class="organizers-section__num">
               1
@@ -528,7 +528,7 @@
         </div>
 
         <div class="organizers-section__row organizers-section__row--reverse">
-          <div class="organizers-section__info">
+          <div class="organizers-section__info organizers-section__info--second">
             <div class="organizers-section__title">
               Jas Nur-sultan
             </div>
@@ -543,15 +543,15 @@
               масштабируемых и быстрорастущих стартапов.
             </div>
 
-            <div class="organizers-section__address">
+            <div class="organizers-section__address organizers-section__address--second">
               <svg class="organizers-section__icon" width="24" height="24">
                 <use href="../assets/img/icons.svg#square-dot"></use>
               </svg>
-              <span>Женева, Швейцария</span>
+              <span>Нур-Султан, Казахстан</span>
             </div>
           </div>
 
-          <div class="organizers-section__img-box">
+          <div class="organizers-section__img-box organizers-section__img-box--second">
             <img src="../assets/img/jas.png" alt="" class="organizers-section__img">
             <div class="organizers-section__num">
               2
@@ -564,13 +564,13 @@
 
     </section>
 
-    <section class="main__section place-section">
+    <section class="main__section place-section" id="place">
 
       <div class="place-section__container">
 
         <div class="place-section__heading heading-medium">
-          <h2 class="heading-medium__white">Место проведения</h2>
-          <h2 class="heading-medium__outlined">Место проведения</h2>
+          <h2 class="heading-medium__white">Место <br> проведения</h2>
+          <h2 class="heading-medium__outlined">Место <br> проведения</h2>
         </div>
 
         <div class="place-section__btn-group">
@@ -590,7 +590,7 @@
 
       <div class="place-section__map-box" v-show="city === 'Almaty'">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.6551198162038!2d76.91484888974962!3d43.23698187256905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883692d9f8f2147%3A0x285d7f198254b840!2sSmArt.Point!5e0!3m2!1sru!2skz!4v1623369520300!5m2!1sru!2skz"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32883.03264421884!2d76.90012658139838!3d43.24142553032324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d16c5cbab%3A0x3d44668fad986d76!2z0JDQu9C80LDRgtGL!5e0!3m2!1sru!2skz!4v1623423740150!5m2!1sru!2skz"
           style="border:0;" allowfullscreen="" loading="lazy" class="place-section__map"></iframe>
 
         <div class="place-section__address-box">
@@ -600,8 +600,7 @@
               <use href="../assets/img/icons.svg#map-pin"></use>
             </svg>
             <span>
-              г. Алматы <br>
-              ул. Байзакова, 280
+              Информация будет предоставлена позже
             </span>
           </div>
 
@@ -633,7 +632,6 @@
 
     </section>
 
-
   </main>
 </template>
 
@@ -656,13 +654,16 @@ export default {
       let finishDate = new Date(2021, 5, 25, 0, 0)
       let today = new Date()
       return finishDate - today
-    }
+    },
   },
 
   methods: {
     chooseCity(city) {
       this.city = city
     }
+  },
+  mounted() {
+
   }
 }
 </script>

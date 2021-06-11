@@ -9,6 +9,10 @@
     line-height: 82px;
     position: relative;
     z-index: 2;
+
+    br {
+      display: none;
+    }
   }
 
   &__outlined {
@@ -18,5 +22,40 @@
     position: absolute;
     left: 50px;
     top: 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__white {
+      br {
+        display: block;
+      }
+    }
+
+    &__outlined {
+      line-height: 110px;
+      br {
+        display: block;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    padding-top: 25px;
+
+    &__white {
+      @include text-style(4rem, 700, $white-color);
+      line-height: 45px;
+    }
+
+    &__outlined {
+      @include text-style(5rem, 700, transparent);
+      line-height: 57px;
+      left: 30px;
+      top: 0;
+    }
   }
 }

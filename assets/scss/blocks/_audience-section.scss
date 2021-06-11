@@ -32,4 +32,35 @@
       margin-bottom: 100px;
     }
   }
+
+  @include respond(tab-land) {
+
+    &__row {
+      flex-direction: column;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include respond(phone) {
+
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__subtitle {
+      width: 100%;
+      margin: 0 auto 30px;
+      padding: 6px 20px 20px;
+      line-height: 20.5px;
+      @include text-style(1.8rem, 400, $white-color);
+    }
+  }
 }

@@ -1,0 +1,79 @@
+.sidebar {
+  width: 600px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: -120%;
+  z-index: 10000;
+  background-color: #161616;
+  padding: 70px;
+
+  transition: all .4s ease;
+
+  &--open {
+    left: 0;
+  }
+
+  &__close {
+    position: absolute;
+    right: 70px;
+    top: 70px;
+    cursor: pointer;
+  }
+
+  &__title {
+    @include text-style(1.8rem, 700, $main-color);
+    line-height: 20.5px;
+    font-family: $gotham;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+
+  &__list {}
+
+  &__item {
+    @include text-style(1.8rem, 400, $white-color);
+    line-height: 20.5px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    display: none;
+    height: 40px;
+    width: 250px;
+  }
+
+  @include respond(tab-land) {
+
+    &__list {
+      margin-bottom: 40px;
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 70px 40px;
+
+    &__close {
+      right: 30px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}

@@ -19,12 +19,16 @@
   &__card {
     width: 387px;
     height: 387px;
-    background: linear-gradient(115.48deg, rgba(255, 255, 255, 0.4) 4.38%, rgba(255, 255, 255, 0.1) 69.54%);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    background-image: url("../assets/img/card-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     &:nth-child(2) {
       margin-top: 20px;
@@ -71,5 +75,75 @@
     @include text-style(1.8rem, 500, rgba($white-color, .6));
     line-height: 20.5px;
     max-width: 900px;
+  }
+
+  @include respond(tab-land) {
+    &__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    &__card {
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    &__heading {
+      margin-bottom: 32px;
+    }
+
+    &__card {
+      width: 100%;
+      height: 343px;
+      display: flex;
+
+      &:nth-child(2) {
+        margin-top: 10px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+    }
+
+    &__place-text {
+      @include text-style(1.4rem, 500, $white-color);
+      line-height: 16.7px;
+      margin-bottom: 10px;
+    }
+
+    &__sum {
+      @include text-style(6rem, 400, $main-color);
+      line-height: 72px;
+    }
+
+    &__title {
+      @include text-style(1.8rem, 500, $white-color);
+      line-height: 20.5px;
+    }
+
+    &__fluid-box {
+      padding: 20px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__text {
+      @include text-style(1.4rem, 500, rgba($white-color, .6));
+      line-height: 16px;
+      max-width: unset;
+    }
   }
 }
