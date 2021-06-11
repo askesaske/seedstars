@@ -1,0 +1,75 @@
+.prize-section {
+
+  &__container {
+    @extend %container;
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  &__card {
+    width: 387px;
+    height: 387px;
+    background: linear-gradient(115.48deg, rgba(255, 255, 255, 0.4) 4.38%, rgba(255, 255, 255, 0.1) 69.54%);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 40px;
+    }
+  }
+
+  &__place-text {
+    @include text-style(1.8rem, 500, $white-color);
+    line-height: 21.5px;
+    margin-bottom: 16px;
+  }
+
+  &__sum {
+    @include text-style(8rem, 400, $main-color);
+    line-height: 96px;
+    font-family: $bebas;
+  }
+
+  &__title {
+    @include text-style(2.4rem, 500, $white-color);
+    line-height: 27px;
+    margin-bottom: 12px;
+
+    &--mb20 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__fluid-box {
+    padding: 30px 60px;
+    background: linear-gradient(115.48deg, rgba(255, 255, 255, 0.152) 4.38%, rgba(255, 255, 255, 0.038) 69.54%);
+    backdrop-filter: blur(30px);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    @include text-style(1.8rem, 500, rgba($white-color, .6));
+    line-height: 20.5px;
+    max-width: 900px;
+  }
+}

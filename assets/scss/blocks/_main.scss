@@ -1,0 +1,13 @@
+.main {
+  padding-bottom: 160px;
+
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 160px;
+    }
+  }
+
+  &__about-section {
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,92 @@
+.organizers-section {
+
+  $e: &;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 220px;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+
+      #{$e}__num {
+        left: unset;
+        bottom: unset;
+        top: -90px;
+        right: -100px;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+  }
+
+  &__title {
+    @include text-style(4rem, 400, $white-color);
+    line-height: 38px;
+    font-family: $gotham;
+    margin-bottom: 110px;
+
+    &--mt50 {
+      margin-top: 50px;
+    }
+  }
+
+  &__text {
+    @include text-style(1.8rem, 400, $white-color);
+    line-height: 21.5px;
+    padding-left: 100px;
+    max-width: 590px;
+  }
+
+  &__address {
+    position: absolute;
+    left: 0;
+    top: 150px;
+
+    span {
+      display: block;
+      @include text-style(1.4rem, 300, $white-color);
+      font-family: $gotham;
+      transform: rotate(90deg) translate(80px, 62px);
+    }
+
+    &--top200 {
+      top: 200px;
+    }
+  }
+
+  &__img-box {
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  &__num {
+    width: 183px;
+    height: 183px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B1B1B;
+    @include text-style(7.2rem, 400, $main-color);
+    font-family: $bebas;
+
+    position: absolute;
+    left: -100px;
+    bottom: -90px;
+  }
+}

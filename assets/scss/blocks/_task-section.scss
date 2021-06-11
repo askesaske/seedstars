@@ -1,0 +1,68 @@
+.task-section {
+  padding: 100px 0;
+  background: linear-gradient(115.48deg, rgba(255, 255, 255, 0.152) 4.38%, rgba(255, 255, 255, 0.038) 69.54%);
+  backdrop-filter: blur(10px);
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__index {
+    @include text-style(1.2rem, 400, $white-color);
+    margin-right: 5px;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__info {}
+
+  &__title {
+    @include text-style(2.4rem, 400, $white-color);
+    font-family: $gotham;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text-style(1.8rem, 400, $white-color);
+    line-height: 19.75px;
+    max-width: 570px;
+    padding-left: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $white-color;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

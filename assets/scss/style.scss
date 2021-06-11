@@ -13,10 +13,23 @@
 
 // blocks
 @import "blocks/container";
+@import "blocks/main";
+@import "blocks/header";
+@import "blocks/button";
+@import "blocks/welcome-section";
+@import "blocks/prize-section";
+@import "blocks/about-section";
+@import "blocks/task-section";
+@import "blocks/audience-section";
+@import "blocks/program-section";
+@import "blocks/organizers-section";
+@import "blocks/place-section";
+@import "blocks/footer";
 
 html, body {
   font-size: 62.5%;
-  font-family: $base-font;
+  font-family: $sf-pro;
+  background-color: #161616;
   //scroll-behavior: smooth;
 }
 

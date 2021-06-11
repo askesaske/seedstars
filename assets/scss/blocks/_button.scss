@@ -1,0 +1,11 @@
+.button {
+  background-color: $main-color;
+  @include text-style(1.6rem, 500, $white-color);
+  border: 1px solid $main-color;
+
+  &--grey {
+    background-color: transparent;
+    border-color: #BFC2C9;
+    color: #BFC2C9;
+  }
+}

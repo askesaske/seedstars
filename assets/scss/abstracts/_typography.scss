@@ -1,2 +1,22 @@
 .heading-medium {
+  position: relative;
+  font-family: $gotham;
+  padding-top: 60px;
+  white-space: nowrap;
+
+  &__white {
+    @include text-style(7.2rem, 700, $white-color);
+    line-height: 82px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__outlined {
+    @include text-style(12rem, 700, transparent);
+    line-height: 136px;
+    -webkit-text-stroke: 1px $main-color;
+    position: absolute;
+    left: 50px;
+    top: 0;
+  }
 }

@@ -1,0 +1,132 @@
+.welcome-section {
+  height: calc(100vh - 70px);
+  background-image: url("../assets/img/neuro-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 20px;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+
+  &__socials {
+    position: absolute;
+    left: 0;
+    top: 30%;
+  }
+
+  &__date {
+    @include text-style(3rem, 400, $white-color);
+    line-height: 44px;
+    font-family: $oswald;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      width: 173px;
+      height: 18px;
+      background-color: $main-color;
+      position: absolute;
+      left: -8px;
+      top: 20px;
+      z-index: -1;
+    }
+  }
+
+  &__social {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__countdown {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__time-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__time-box {
+    width: 86px;
+    height: 117px;
+    background: linear-gradient(115.48deg, rgba(255, 255, 255, 0.4) 4.38%, rgba(255, 255, 255, 0.1) 69.54%);
+    opacity: 0.7;
+    box-shadow: 0 1px 24px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+
+    &:first-child {
+      margin-right: 2px;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include text-style(8rem, 400, $white-color);
+    font-family: $bebas;
+    letter-spacing: 50px;
+
+    &--solo {
+      left: 115px;
+    }
+  }
+
+  &__time-text {
+    @include text-style(1.8rem, 400, $white-color);
+    font-family: $bebas;
+  }
+
+
+  &__btn {
+    width: 796px;
+    height: 50px;
+    @include text-style(2.2rem, 500, #1e1e1e);
+    margin-bottom: 38px;
+  }
+
+  &__heading {
+    @include text-style(14.4rem, 700, $main-color);
+    font-family: $oswald;
+    line-height: 213px;
+    letter-spacing: 0.155em;
+    margin-left: -95px;
+    position: relative;
+
+    &:after {
+      content: 'HACKATHON';
+      @include text-style(14.4rem, 400, transparent);
+      letter-spacing: 0.155em;
+      line-height: 173px;
+      -webkit-text-stroke: 2px $white-color;
+      position: absolute;
+      top: 77px;
+      left: 52%;
+    }
+  }
+}

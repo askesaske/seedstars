@@ -1,0 +1,57 @@
+.program-section {
+
+  &__container {
+    @extend %container;
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__list {}
+
+  &__box {
+    width: 100%;
+    height: 155px;
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    padding: 25px 80px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date {
+    flex-shrink: 0;
+    text-align: center;
+    margin-right: 120px;
+  }
+
+  &__day {
+    @include text-style(8rem, 400, $main-color);
+    line-height: 96px;
+    letter-spacing: 0.03em;
+    font-family: $bebas;
+  }
+
+  &__month {
+    @include text-style(1.8rem, 400, $main-color);
+    line-height: 21.5px;
+  }
+
+  &__title {
+    @include text-style(2.4rem, 700, $white-color);
+    font-family: $gotham;
+    line-height: 23px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include text-style(1.8rem, 400, rgba($white-color, .6));
+    line-height: 21.5px;
+    max-width: 530px;
+  }
+}

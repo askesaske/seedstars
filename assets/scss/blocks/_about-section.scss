@@ -1,0 +1,122 @@
+.about-section {
+
+  background-image: url("../assets/img/about-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 46px 0 80px 0;
+
+  &__container {
+    @extend %container;
+    position: relative;
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__index {
+    @include text-style(1.2rem, 400, $white-color);
+    margin-right: 5px;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__info {}
+
+  &__title {
+    @include text-style(2.4rem, 400, $white-color);
+    font-family: $gotham;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text-style(1.8rem, 400, $white-color);
+    line-height: 19.75px;
+    max-width: 570px;
+  }
+
+  &__cards {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__card {
+    width: 195px;
+    height: 155px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    padding: 10px 10px 30px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__count-box {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__num {
+    @include text-style(1.2rem, 400, $white-color);
+    line-height: 14.4px;
+    font-family: $bebas;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--grey {
+      color: rgba($white-color, .5);
+      top: unset;
+      bottom: 0;
+      left: unset;
+      right: 0;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__date {
+    @include text-style(2.4rem, 400, $main-color);
+    font-family: $bebas;
+    letter-spacing: 0.03em;
+    line-height: 28.8px;
+    margin-bottom: 10px;
+  }
+
+  &__card-text {
+    @include text-style(1.4rem, 400, $white-color);
+    line-height: 16.7px;
+  }
+}
