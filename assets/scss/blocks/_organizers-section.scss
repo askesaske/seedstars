@@ -81,6 +81,19 @@
     position: relative;
   }
 
+  &__img-wrapper {
+    width: 387px;
+    height: 387px;
+    background-image: url("../assets/img/org-square.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__num {
     width: 183px;
     height: 183px;
@@ -155,6 +168,11 @@
           right: -44px;
         }
       }
+    }
+
+    &__img-wrapper {
+      width: 299px;
+      height: 299px;
     }
 
     &__title {

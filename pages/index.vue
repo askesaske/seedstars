@@ -519,7 +519,10 @@
           </div>
 
           <div class="organizers-section__img-box organizers-section__img-box--first">
-            <img src="../assets/img/seedstars.svg" alt="" class="organizers-section__img">
+            <div class="organizers-section__img-wrapper">
+              <img src="../assets/img/seedstars-org.svg" alt="" class="organizers-section__img">
+            </div>
+
             <div class="organizers-section__num">
               1
             </div>
@@ -552,7 +555,9 @@
           </div>
 
           <div class="organizers-section__img-box organizers-section__img-box--second">
-            <img src="../assets/img/jas.svg" alt="" class="organizers-section__img">
+            <div class="organizers-section__img-wrapper">
+              <img src="../assets/img/jas.svg" alt="" class="organizers-section__img">
+            </div>
             <div class="organizers-section__num">
               2
             </div>

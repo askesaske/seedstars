@@ -11,6 +11,12 @@
     flex-wrap: wrap;
   }
 
+  &__logo {
+    &--sm {
+      width: 124px;
+    }
+  }
+
   &__socials {
     display: flex;
     align-items: center;

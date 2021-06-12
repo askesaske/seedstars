@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container">
       <img src="../assets/img/footer-logo-1.png" alt="" class="footer__logo">
-      <img src="../assets/img/footer-logo-2.png" alt="" class="footer__logo">
+      <img src="../assets/img/footer-logo-2.svg" alt="" class="footer__logo footer__logo--sm">
 
       <div class="footer__socials">
         <a href="https://www.facebook.com/JAStalents" class="footer__social">
