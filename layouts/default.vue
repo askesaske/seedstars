@@ -10,9 +10,38 @@
 @import '../node_modules/swiper/swiper-bundle.css';
 @import "../assets/scss/style";
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap');
-//font-family: 'Bebas Neue', cursive;
-//font-family: 'Oswald', sans-serif;
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/BebasNeue-Regular.eot');
+  src: local('☺'),
+  url('../assets/fonts/BebasNeue-Regular.woff') format('woff'),
+  url('../assets/fonts/BebasNeue-Regular.ttf') format('truetype'),
+  url('../assets/fonts/BebasNeue-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/Oswald-Regular.eot');
+  src: local('☺'),
+  url('../assets/fonts/Oswald-Regular.woff') format('woff'),
+  url('../assets/fonts/Oswald-Regular.ttf') format('truetype'),
+  url('../assets/fonts/Oswald-Regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../assets/fonts/Oswald-Bold.eot');
+  src: local('☺'),
+  url('../assets/fonts/Oswald-Bold.woff') format('woff'),
+  url('../assets/fonts/Oswald-Bold.ttf') format('truetype'),
+  url('../assets/fonts/Oswald-Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'SF Pro';

@@ -7,7 +7,7 @@
         <use href="../assets/img/icons.svg#burger"></use>
       </svg>
 
-      <img src="../assets/img/logo.png" alt="" class="header__logo">
+      <img src="../assets/img/logo.svg" alt="" class="header__logo">
 
       <div class="header__button-group">
         <a

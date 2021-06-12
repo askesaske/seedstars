@@ -519,7 +519,7 @@
           </div>
 
           <div class="organizers-section__img-box organizers-section__img-box--first">
-            <img src="../assets/img/seedstars.png" alt="" class="organizers-section__img">
+            <img src="../assets/img/seedstars.svg" alt="" class="organizers-section__img">
             <div class="organizers-section__num">
               1
             </div>
@@ -552,7 +552,7 @@
           </div>
 
           <div class="organizers-section__img-box organizers-section__img-box--second">
-            <img src="../assets/img/jas.png" alt="" class="organizers-section__img">
+            <img src="../assets/img/jas.svg" alt="" class="organizers-section__img">
             <div class="organizers-section__num">
               2
             </div>
@@ -610,7 +610,7 @@
 
       <div class="place-section__map-box" v-show="city === 'Nur-Sultan'">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1771.977363055205!2d71.42412338568317!3d51.090848704941905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245853455cd8be1%3A0xf1de8df5811d9c41!2z0L_RgC3Rgi4g0JzQsNC90LPQuNC70LjQuiDQldC7LiA1NSwg0J3Rg9GALdCh0YPQu9GC0LDQvSAwMjAwMDA!5e0!3m2!1sru!2skz!4v1623370252955!5m2!1sru!2skz"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.0194017180393!2d71.41816375719158!3d51.08964945035462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245850d5131281b%3A0x822ca9d6999e5b5d!2z0JDQutCw0LTQtdC80LjRjyDQldC70LHQsNGB0Ys!5e0!3m2!1sru!2skz!4v1623464872299!5m2!1sru!2skz"
           style="border:0;" allowfullscreen="" loading="lazy" class="place-section__map"></iframe>
 
         <div class="place-section__address-box">

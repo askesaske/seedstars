@@ -98,6 +98,11 @@
       @include text-style(1.4rem, 400, $white-color);
       line-height: 15.36px;
       max-width: unset;
+
+      &:before {
+        top: 6px;
+        transform: unset;
+      }
     }
   }
 }

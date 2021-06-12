@@ -188,8 +188,9 @@
   }
 
   @include respond(phone) {
-    background-position-y: 250px;
+    background-position-y: 200px;
     background-size: 268px 264px;
+    padding-top: 70px;
 
     &__socials {
       left: 15px;
