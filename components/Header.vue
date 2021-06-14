@@ -62,7 +62,7 @@
 
     <div class="header__modal modal" v-show="modalOpen">
 
-      <div class="modal__wrapper">
+      <form @click.prevent="sendForm" class="modal__wrapper" v-if="!checked">
 
         <svg class="modal__close" width="16" height="16" @click="modalOpen = false">
           <use href="../assets/img/icons.svg#close"></use>
@@ -78,14 +78,30 @@
 
         <div class="modal__input-list">
 
-          <input type="text" class="modal__input" placeholder="Ваше имя">
-          <input type="email" class="modal__input" placeholder="Ваша электронная почта">
-          <input type="text" class="modal__input" placeholder="Текст сообщения">
+          <input type="text" class="modal__input" placeholder="Ваше имя" v-model="name">
+          <input type="email" class="modal__input" placeholder="Ваша электронная почта" v-model="email">
+          <input type="text" class="modal__input" placeholder="Текст сообщения" v-model="text">
 
+        </div>
+
+        <div class="modal__error">
+          {{ errorMessage }}
         </div>
 
         <button class="modal__btn button">Отправить</button>
 
+      </form>
+
+      <div class="modal__wrapper modal__wrapper--centered" v-else>
+        <svg class="modal__close" width="16" height="16" @click="modalOpen = false">
+          <use href="../assets/img/icons.svg#close"></use>
+        </svg>
+
+        <img src="../assets/img/icons/checked.svg" alt="" class="modal__checked">
+
+        <h4 class="modal__title">
+          Ваш запрос успешно отправлен!
+        </h4>
       </div>
 
     </div>
@@ -99,15 +115,35 @@ export default {
     return {
       sidebarOpen: false,
       modalOpen: false,
-      scrollPosition: null
+      scrollPosition: null,
+      name: '',
+      email: '',
+      text: '',
+      errorMessage: '',
+      checked: false
     }
   },
-  computed: {
-
-  },
+  computed: {},
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY
+    },
+    sendForm() {
+      if (this.email !== '' && this.text !== '' && this.name !== '') {
+        this.$axios.post(process.env.API_URL + 'supports/', {
+          name: this.name,
+          email: this.email,
+          text: this.text
+        })
+          .then(response => {
+            if (response.status === 201) {
+              this.checked = true
+            }
+          })
+          .catch(e => console.log(e))
+      } else {
+        this.errorMessage = 'Пожалуйста, заполните все поля'
+      }
     }
   },
   mounted() {

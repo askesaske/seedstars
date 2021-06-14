@@ -18,6 +18,19 @@
     width: 800px;
     height: 596px;
     padding: 70px;
+
+    &--centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__checked {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 60px;
   }
 
   &__close {
@@ -43,7 +56,7 @@
   }
 
   &__input-list {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   &__input {
@@ -56,6 +69,12 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+  }
+
+  &__error {
+    @include text-style(1.6rem, 500, #ea2b2b);
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   &__btn {
@@ -72,6 +91,12 @@
       width: calc(100% - 30px);
       height: unset;
       padding: 40px;
+    }
+
+    &__checked {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
     }
 
     &__close {

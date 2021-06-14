@@ -533,7 +533,7 @@
         <div class="organizers-section__row organizers-section__row--reverse">
           <div class="organizers-section__info organizers-section__info--second">
             <div class="organizers-section__title">
-              Jas Nur-sultan
+              Jas Nur-Sultan
             </div>
 
             <div class="organizers-section__text">
@@ -595,7 +595,7 @@
 
       <div class="place-section__map-box" v-show="city === 'Almaty'">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32883.03264421884!2d76.90012658139838!3d43.24142553032324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d16c5cbab%3A0x3d44668fad986d76!2z0JDQu9C80LDRgtGL!5e0!3m2!1sru!2skz!4v1623423740150!5m2!1sru!2skz"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.542627766068!2d76.92705151571266!3d43.21908158841082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f307c71a35f%3A0x5b07dae73f0d5066!2z0JHQuNC30L3QtdGBLdCm0LXQvdGC0YAg0JXRgdC10L3RgtCw0Lkg0KLQsNGD0Y3RgCwg0L_RgNC-0YHQv9C10LrRgiBB0LvRjC3QpNCw0YDQsNCx0LggNzcvNywg0JDQu9C80LDRgtGLIDA1MDA0MA!5e0!3m2!1sru!2skz!4v1623660478816!5m2!1sru!2skz"
           style="border:0;" allowfullscreen="" loading="lazy" class="place-section__map"></iframe>
 
         <div class="place-section__address-box">
@@ -605,7 +605,10 @@
               <use href="../assets/img/icons.svg#map-pin"></use>
             </svg>
             <span>
-              Информация будет предоставлена позже
+              г. Алматы, <br>
+              проспект Аль-Фараби 77/7, <br>
+              Башня Есентай, <br>
+              этаж 8, Level 8, конференц-зал «Медеу»
             </span>
           </div>
 
