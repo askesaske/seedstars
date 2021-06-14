@@ -640,6 +640,10 @@
 
     </section>
 
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=820774322176569&ev=PageView&noscript=1"/>
+    </noscript>
   </main>
 </template>
 
