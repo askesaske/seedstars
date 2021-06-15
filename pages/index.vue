@@ -97,12 +97,10 @@
           </vue-count-down>
         </no-ssr>
 
-        <a
-          href="https://form.jotform.com/211601184592451"
-          class="welcome-section__btn button" onclick="fbq('track', 'Lead')"
-        >
+        <div
+          class="welcome-section__btn button" @click="participate">
           Принять участие
-        </a>
+        </div>
 
         <p class="welcome-section__heading">
           БЛОКЧЕЙН
@@ -707,6 +705,11 @@ export default {
   methods: {
     chooseCity(city) {
       this.city = city;
+    },
+    participate() {
+      this.$fb.track('track', 'Lead')
+      window.location.href = 'https://form.jotform.com/211601184592451'
+
     }
   },
   mounted() {

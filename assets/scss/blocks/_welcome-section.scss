@@ -112,6 +112,7 @@
     height: 50px;
     @include text-style(2.2rem, 500, #1e1e1e);
     margin-bottom: 38px;
+    cursor: pointer;
   }
 
   &__heading {
