@@ -1,10 +1,20 @@
 .about-section {
 
+  $e: &;
+
   background-image: url("../assets/img/about-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 46px 0 80px 0;
+
+  &--below {
+    padding: 46px 0 180px;
+
+    #{$e}__cards {
+      top: 185px;
+    }
+  }
 
   &__container {
     @extend %container;

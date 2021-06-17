@@ -170,11 +170,13 @@
       </div>
     </section>
 
-    <section class="main__about-section about-section" id="about">
+    <section class="main__about-section about-section"
+             :class="{'about-section--below' : $i18n.locale !== 'ru'}"
+             id="about">
       <div class="about-section__container">
         <div class="about-section__heading heading-medium">
-          <h2 class="heading-medium__white">{{ $t('about.heading') }}</h2>
-          <h2 class="heading-medium__outlined">{{ $t('about.heading') }}</h2>
+          <h2 class="heading-medium__white" v-html="$t('about.heading')"></h2>
+          <h2 class="heading-medium__outlined" v-html="$t('about.heading')"></h2>
         </div>
 
         <div class="about-section__wrapper">
@@ -388,8 +390,8 @@
     <section class="main__section program-section" id="program">
       <div class="program-section__container">
         <div class="audience-section__heading heading-medium">
-          <h2 class="heading-medium__white">{{ $t('program.heading') }}</h2>
-          <h2 class="heading-medium__outlined">{{ $t('program.heading') }}</h2>
+          <h2 class="heading-medium__white" v-html="$t('program.heading')"></h2>
+          <h2 class="heading-medium__outlined" v-html="$t('program.heading')"></h2>
         </div>
 
         <div class="program-section__list">
@@ -479,8 +481,8 @@
     <section class="main__section organizers-section" id="organizers">
       <div class="organizers-section__container">
         <div class="organizers-section__heading heading-medium">
-          <h2 class="heading-medium__white">{{ $t('organizers.heading') }}</h2>
-          <h2 class="heading-medium__outlined">{{ $t('organizers.heading') }}</h2>
+          <h2 class="heading-medium__white" v-html="$t('organizers.heading')"></h2>
+          <h2 class="heading-medium__outlined" v-html="$t('organizers.heading')"></h2>
         </div>
 
         <div class="organizers-section__row">
