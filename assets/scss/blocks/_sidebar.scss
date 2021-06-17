@@ -42,6 +42,10 @@
     }
   }
 
+  &__btn-group {
+    margin-bottom: 20px;
+  }
+
   &__btn {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -51,7 +55,31 @@
     width: 250px;
   }
 
+  &__lang-box {
+    display: none;
+  }
+
+  &__lang {
+    @include text-style(1.5rem, 500, $white-color);
+    padding: 10px;
+    //background-color: rgba($main-color, .8);
+    border-radius: 6px;
+
+    &--active {
+      background-color: $main-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
   @include respond(tab-land) {
+
+    &__lang-box {
+      display: flex;
+      align-items: center;
+    }
 
     &__list {
       margin-bottom: 40px;

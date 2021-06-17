@@ -1,0 +1,96 @@
+{
+  "welcome": {
+    "date": "June 25-28",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "participate": "Participate",
+    "blockchain": "BLOCKCHAIN"
+  },
+  "prize": {
+    "heading": "Prize fund",
+    "place1": "1st place",
+    "sum1": "1 000 000 KZT",
+    "place2": "2nd place",
+    "sum2": "500 000 KZT",
+    "place3": "3rd place",
+    "sum3": "300 000 KZT",
+    "title": "As well as:",
+    "itemTitle1": "Further employment at JAS Nur-Sultan",
+    "itemText1": "The best participants will be considered for 5 and more vacancies.",
+    "itemTitle2": "Investment in blockchain projects",
+    "itemText2": "Following the event, the list of the most striking projects will be submitted to the Investment Council for grant and investment support consideration."
+  },
+  "about": {
+    "heading": "About Hackathon",
+    "title1": "Registration",
+    "text1": "Registration will be open from 14.06 to 24.06 Applications are accepted both from teams and individual participants.",
+    "title2": "Hackathon",
+    "text2": "Online Hackathon is designed for developers from all over Kazakhstan. Point offices for offline participation will be provided for residents of the cities of Nur-Sultan and Almaty.",
+    "title3": "Hackathon results",
+    "text3": "On June 28, there will be an announcement of winners on the live broadcast. As a result of the hackathon, developers who have submitted the best solutions will be offered employment at JAS Nur-Sultan (there are 5 and  more open vacancies)! In addition to that, the most striking projects will be submitted to the investment council for grant and investment support consideration.",
+    "cardText1": "Registration opening date",
+    "cardText2": "Registration closing date",
+    "cardText3": "Hackathon dates"
+  },
+  "task": {
+    "heading": "Task",
+    "title": "Opensea style marketplace creation:",
+    "text1": "NFT Generator Implementation",
+    "text2": "Smart Contract Generator for ERC20 Token"
+  },
+  "audience": {
+    "heading": "Target <br/> audience",
+    "subtitle": "We look for developers with experience in:"
+  },
+  "program": {
+    "heading": "Hackathon program",
+    "month": "June",
+    "title1": "Hackathon start",
+    "text1": "Greetings from the event organizers. Educational workshops.",
+    "title2": "Work solution",
+    "text2": "Time to develop a solution to the problem.",
+    "title3": "Solution presentation and interviews",
+    "text3": "Participants present their solutions and are interviewed by representatives of JAS Nur-Sultan.",
+    "title4": "The final",
+    "text4": "Winners announcement. Hackathon closing ceremony."
+  },
+  "organizers": {
+    "heading": "Organizers",
+    "text1": "Seedstars is a Swiss group of companies working in the field of startups in emerging markets with the goal of improving people's lives through technology and entrepreneurship development, connecting stakeholders and investing in high-performing startups.",
+    "address1": "Geneva, Switzerland",
+    "text2": "JAS Nur-Sultan is a young venture and investment company registered in the jurisdiction of the Astana International Financial Center (AIFC), and is also a member of the Nazarbayev University ecosystem.\nThe main activity of the company is to proactively search for startups through networking and various incubation and acceleration programs in Kazakhstan with the subsequent financing of promising, scalable and fast-growing startups.\n",
+    "address2": "Nur-Sultan, Kazakhstan"
+  },
+  "place": {
+    "heading": "Hackathon <br/> venues",
+    "almaty": "Almaty",
+    "astana": "Nur-Sultan",
+    "address1": "Almaty, <br/> 77/7 Al-Farabi Av., <br/> Esentai Tower, <br/> 8th floor, <br/> \"Medeu\" conference hall",
+    "address2": "Nur-Sultan <br/> 55/13 Mangilik El st., <br/> block C2-2, <br/> 3rd floor, office 3-11"
+  },
+  "sidebar": {
+    "menu": "Menu",
+    "text1": "Prize fund",
+    "text2": "About Hackathon",
+    "text3": "Task",
+    "text4": "Target audience",
+    "text5": "Hackathon program",
+    "text6": "Organizers",
+    "text7": "Hackathon venues"
+  },
+  "buttons": {
+    "text1": "Participation rules",
+    "text2": "Contact us",
+    "text3": "Send"
+  },
+  "modal": {
+    "title": "Contact us",
+    "subtitle": "If you have any questions, please do not hesitate to contact us, we will be happy to answer!",
+    "name": "Your name",
+    "email": "Your email address",
+    "message": "Message text",
+    "success": "Your request has been successfully sent!"
+  }
+}

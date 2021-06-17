@@ -7,13 +7,29 @@
         <use href="../assets/img/icons.svg#burger"></use>
       </svg>
 
+      <!--      <div class="header__lang">-->
+      <!--        <span @click="$i18n.locale = 'kz'">KAZ</span>-->
+      <!--        <span @click="$i18n.locale = 'ru'">RUS</span>-->
+      <!--        <span @click="$i18n.locale = 'en'">ENG</span>-->
+      <!--      </div>-->
+
       <img src="../assets/img/logo.svg" alt="" class="header__logo">
 
       <div class="header__button-group">
+
+        <div class="header__lang-box" v-click-outside="hideLanguage" @click="toggleLanguage">
+          {{ this.language }}
+          <div class="header__lang-dropdown" v-if="languageToggle">
+            <p @click="changeLanguage(language, i)" v-for="(language, i) in languages" :key="language">
+              {{ language }}
+            </p>
+          </div>
+        </div>
+
         <a
           href="https://docs.google.com/document/d/1FdJnKqeiV1rvhLDw8JHEWGNLQU-FrwzxT-wuT9twC-U/edit#heading=h.5l6clncjd0vn"
-          class="header__btn button">Правила участия</a>
-        <button class="header__btn button" @click="modalOpen = true">Связаться с нами</button>
+          class="header__btn button">{{ $t('buttons.text1') }}</a>
+        <button class="header__btn button" @click="modalOpen = true">{{ $t('buttons.text2') }}</button>
       </div>
 
     </div>
@@ -25,39 +41,54 @@
       </svg>
 
       <h6 class="sidebar__title">
-        Меню
+        {{ $t('sidebar.menu') }}
       </h6>
 
       <div class="sidebar__list">
         <p class="sidebar__item"
            v-scroll-to="{el: '#prize', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">Призовой фонд</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text1') }}</p>
         <p class="sidebar__item"
            v-scroll-to="{el: '#about', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">О хакатоне</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text2') }}</p>
         <p class="sidebar__item"
            v-scroll-to="{el: '#task', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">Задача</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text3') }}</p>
         <p class="sidebar__item"
            v-scroll-to="{el: '#audience', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">Целевая аудитория</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text4') }}</p>
         <p class="sidebar__item"
            v-scroll-to="{el: '#program', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">Программа</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text5') }}</p>
         <p class="sidebar__item"
            v-scroll-to="{el: '#organizers', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">Организаторы</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text6') }}</p>
         <p class="sidebar__item"
            v-scroll-to="{el: '#place', duration: 700, offset: -80}"
-           @click="sidebarOpen = false">Место проведения</p>
+           @click="sidebarOpen = false">{{ $t('sidebar.text7') }}</p>
       </div>
 
       <div class="sidebar__btn-group">
         <a
           href="https://docs.google.com/document/d/1FdJnKqeiV1rvhLDw8JHEWGNLQU-FrwzxT-wuT9twC-U/edit#heading=h.5l6clncjd0vn"
-          class="sidebar__btn button">Правила участия</a>
-        <button class="sidebar__btn button" @click="modalOpen = true; sidebarOpen = false">Связаться с нами</button>
+          class="sidebar__btn button">{{ $t('buttons.text1') }}</a>
+        <button class="sidebar__btn button" @click="modalOpen = true; sidebarOpen = false">
+          {{ $t('buttons.text2') }}
+        </button>
       </div>
+
+      <div class="sidebar__lang-box">
+        <div class="sidebar__lang"
+             @click="$i18n.locale = 'ru'"
+             :class="{'sidebar__lang--active' : $i18n.locale === 'ru'}">РУС</div>
+        <div class="sidebar__lang"
+             @click="$i18n.locale = 'en'"
+             :class="{'sidebar__lang--active' : $i18n.locale === 'en'}">ENG</div>
+        <div class="sidebar__lang"
+             @click="$i18n.locale = 'kz'"
+             :class="{'sidebar__lang--active' : $i18n.locale === 'kz'}">ҚАЗ</div>
+      </div>
+
     </div>
 
     <div class="header__modal modal" v-show="modalOpen">
@@ -69,26 +100,24 @@
         </svg>
 
         <h4 class="modal__title">
-          Связаться с нами
+          {{ $t('modal.title') }}
         </h4>
 
         <p class="modal__subtitle">
-          Если у Вас есть какие-либо вопросы, пишите нам, мы с радостью ответим!
+          {{ $t('modal.subtitle') }}
         </p>
 
         <div class="modal__input-list">
 
-          <input type="text" class="modal__input" placeholder="Ваше имя" v-model="name">
-          <input type="email" class="modal__input" placeholder="Ваша электронная почта" v-model="email">
-          <input type="text" class="modal__input" placeholder="Текст сообщения" v-model="text">
+          <input type="text" class="modal__input" :placeholder="$t('modal.name')" v-model="name">
+          <input type="email" class="modal__input" :placeholder="$t('modal.email')" v-model="email">
+          <input type="text" class="modal__input" :placeholder="$t('modal.message')" v-model="text">
 
         </div>
 
-        <div class="modal__error">
-          {{ errorMessage }}
-        </div>
+        <div class="modal__error">{{ errorMessage }}</div>
 
-        <button class="modal__btn button">Отправить</button>
+        <button class="modal__btn button">{{ $t('buttons.text3') }}</button>
 
       </form>
 
@@ -100,7 +129,7 @@
         <img src="../assets/img/icons/checked.svg" alt="" class="modal__checked">
 
         <h4 class="modal__title">
-          Ваш запрос успешно отправлен!
+          {{ $t('modal.success') }}
         </h4>
       </div>
 
@@ -110,6 +139,8 @@
 </template>
 
 <script>
+import ClickOutside from 'vue-click-outside';
+
 export default {
   data() {
     return {
@@ -120,10 +151,20 @@ export default {
       email: '',
       text: '',
       errorMessage: '',
-      checked: false
+      checked: false,
+      languages: [
+        "РУС",
+        "ENG",
+        "ҚАЗ"
+      ],
+      language: "РУС",
+      languageToggle: false
     }
   },
   computed: {},
+  directives: {
+    ClickOutside
+  },
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY
@@ -142,8 +183,40 @@ export default {
           })
           .catch(e => console.log(e))
       } else {
-        this.errorMessage = 'Пожалуйста, заполните все поля'
+        if (this.$i18n.locale === 'ru') {
+          this.errorMessage = 'Пожалуйста, заполните все поля'
+        }
+        if (this.$i18n.locale === 'kz') {
+          this.errorMessage = 'Барлық өрістерді толтырыңыз'
+        }
+        if (this.$i18n.locale === 'en') {
+          this.errorMessage = 'Please fill in all fields'
+        }
       }
+    },
+    changeLanguage(lang, i) {
+      if (this.language !== lang) {
+        this.language = lang;
+        this.languages.splice(i, 1)
+        this.languages.unshift(lang)
+
+        if (lang === 'РУС') {
+          this.$i18n.locale = 'ru'
+        }
+        if (lang === 'ENG') {
+          this.$i18n.locale = 'en'
+        }
+        if (lang === 'ҚАЗ') {
+          this.$i18n.locale = 'kz'
+        }
+      }
+      this.languageToggle = false;
+    },
+    toggleLanguage() {
+      this.languageToggle = !this.languageToggle;
+    },
+    hideLanguage() {
+      this.languageToggle = false;
     }
   },
   mounted() {

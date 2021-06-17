@@ -14,6 +14,16 @@
   }
 
 
+  &__lang {
+    font-size: 1.8rem;
+    color: $white-color;
+
+    span {
+      cursor: pointer;
+      margin: 0 20px;
+    }
+  }
+
   &__container {
     @extend %container;
     position: relative;
@@ -37,6 +47,34 @@
   &__button-group {
     display: flex;
     align-items: center;
+  }
+
+  &__lang-box {
+    padding: 10px;
+    position: relative;
+    background-color: #212121;
+    @include text-style(1.6rem, 500, $white-color);
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  &__lang-dropdown {
+    -webkit-box-shadow: 0 8px 5px 0 rgba(11, 13, 15, 0.15);
+    -moz-box-shadow: 0 8px 5px 0 rgba(11, 13, 15, 0.15);
+    box-shadow: 0 8px 5px 0 rgba(11, 13, 15, 0.15);
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #212121;
+    top: 0;
+    left: 0;
+    p {
+      padding: 10px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $white-color;
+      }
+    }
   }
 
   &__btn {

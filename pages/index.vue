@@ -30,7 +30,7 @@
         </div>
 
         <p class="welcome-section__date">
-          25-28 ИЮНЯ
+          {{ $t('welcome.date') }}
         </p>
 
         <no-ssr>
@@ -49,7 +49,7 @@
                 </div>
               </div>
               <div class="welcome-section__time-text">
-                Дней
+                {{ $t('welcome.days') }}
               </div>
             </div>
 
@@ -63,7 +63,7 @@
                 </div>
               </div>
               <div class="welcome-section__time-text">
-                Часов
+                {{ $t('welcome.hours') }}
               </div>
             </div>
 
@@ -77,7 +77,7 @@
                 </div>
               </div>
               <div class="welcome-section__time-text">
-                Минут
+                {{ $t('welcome.minutes') }}
               </div>
             </div>
 
@@ -91,7 +91,7 @@
                 </div>
               </div>
               <div class="welcome-section__time-text">
-                Секунд
+                {{ $t('welcome.seconds') }}
               </div>
             </div>
           </vue-count-down>
@@ -99,11 +99,11 @@
 
         <div
           class="welcome-section__btn button" @click="participate">
-          Принять участие
+          {{ $t('welcome.participate') }}
         </div>
 
         <p class="welcome-section__heading">
-          БЛОКЧЕЙН
+          {{ $t('welcome.blockchain') }}
         </p>
       </div>
     </section>
@@ -111,14 +111,14 @@
     <section class="main__section prize-section" id="prize">
       <div class="prize-section__container">
         <div class="prize-section__heading heading-medium">
-          <h2 class="heading-medium__white">Призовой фонд</h2>
-          <h2 class="heading-medium__outlined">Призовой фонд</h2>
+          <h2 class="heading-medium__white">{{ $t('prize.heading') }}</h2>
+          <h2 class="heading-medium__outlined">{{ $t('prize.heading') }}</h2>
         </div>
 
         <div class="prize-section__row">
           <div class="prize-section__card">
             <span class="prize-section__place-text">
-              1-ое место
+              {{ $t('prize.place1') }}
             </span>
             <p class="prize-section__sum">
               1 000 000 KZT
@@ -127,7 +127,7 @@
 
           <div class="prize-section__card">
             <span class="prize-section__place-text">
-              2-ое место
+              {{ $t('prize.place2') }}
             </span>
             <p class="prize-section__sum">
               500 000 KZT
@@ -136,7 +136,7 @@
 
           <div class="prize-section__card">
             <span class="prize-section__place-text">
-              3-ье место
+              {{ $t('prize.place3') }}
             </span>
             <p class="prize-section__sum">
               300 000 KZT
@@ -146,26 +146,24 @@
 
         <div class="prize-section__info">
           <h5 class="prize-section__title prize-section__title--mb20">
-            А также:
+            {{ $t('prize.title') }}
           </h5>
 
           <div class="prize-section__fluid-box">
             <h5 class="prize-section__title">
-              Дальнейшее трудоустройство в JAS Nur-Sultan
+              {{ $t('prize.itemTitle1') }}
             </h5>
             <p class="prize-section__text">
-              Лучшие участники будут рассматриваться на 5 и более вакансий.
+              {{ $t('prize.itemText1') }}
             </p>
           </div>
 
           <div class="prize-section__fluid-box">
             <h5 class="prize-section__title">
-              Инвестирование в блокчейн проекты
+              {{ $t('prize.itemTitle2') }}
             </h5>
             <p class="prize-section__text">
-              По итогам мероприятия список лучших проектов будет передан в
-              инвестиционный совет для рассмотрения на возможность грантовой и
-              инвестиционной поддержки для развития продукта.
+              {{ $t('prize.itemText2') }}
             </p>
           </div>
         </div>
@@ -175,8 +173,8 @@
     <section class="main__about-section about-section" id="about">
       <div class="about-section__container">
         <div class="about-section__heading heading-medium">
-          <h2 class="heading-medium__white">О Хакатоне</h2>
-          <h2 class="heading-medium__outlined">О Хакатоне</h2>
+          <h2 class="heading-medium__white">{{ $t('about.heading') }}</h2>
+          <h2 class="heading-medium__outlined">{{ $t('about.heading') }}</h2>
         </div>
 
         <div class="about-section__wrapper">
@@ -191,12 +189,11 @@
 
             <div class="about-section__info">
               <h4 class="about-section__title">
-                Регистрация
+                {{ $t('about.title1') }}
               </h4>
 
               <p class="about-section__text">
-                Регистрация будет открыта с 14.06 по 24.06 Заявки принимаются
-                как от команд, так и от индивидуальных участников.
+                {{ $t('about.text1') }}
               </p>
             </div>
           </div>
@@ -212,13 +209,11 @@
 
             <div class="about-section__info">
               <h4 class="about-section__title">
-                Хакатон
+                {{ $t('about.title2') }}
               </h4>
 
               <p class="about-section__text">
-                Онлайн Хакатон рассчитан для разработчиков со всего Казахстана.
-                Для жителей городов Нур-Султан и Алматы будут предусмотрены
-                поинт-офисы для офлайн участия на Хакатоне.
+                {{ $t('about.text2') }}
               </p>
             </div>
           </div>
@@ -234,14 +229,11 @@
 
             <div class="about-section__info">
               <h4 class="about-section__title">
-                Результаты Хакатона
+                {{ $t('about.title3') }}
               </h4>
 
               <p class="about-section__text">
-                28.06 в прямом эфире будут объявлены победители Хакатона. По
-                итогам Хакатона лучшие участники будут рассматриваться на 5 и
-                более вакансий, а самые яркие проекты будут переданы в
-                инвестиционный совет для рассмотрения.
+                {{ $t('about.text3') }}
               </p>
             </div>
           </div>
@@ -264,7 +256,7 @@
             <h5 class="about-section__date">14.06.2021</h5>
 
             <p class="about-section__card-text">
-              Дата открытия регистрации
+              {{ $t('about.cardText1') }}
             </p>
           </div>
 
@@ -284,7 +276,7 @@
             <h5 class="about-section__date">24.06.2021</h5>
 
             <p class="about-section__card-text">
-              Дата закрытия регистрации
+              {{ $t('about.cardText2') }}
             </p>
           </div>
 
@@ -304,7 +296,7 @@
             <h5 class="about-section__date">25-28.06.2021</h5>
 
             <p class="about-section__card-text">
-              Дата проведения
+              {{ $t('about.cardText3') }}
             </p>
           </div>
         </div>
@@ -314,8 +306,8 @@
     <section class="main__section task-section" id="task">
       <div class="task-section__container">
         <div class="task-section__heading heading-medium">
-          <h2 class="heading-medium__white">Задача</h2>
-          <h2 class="heading-medium__outlined">Задача</h2>
+          <h2 class="heading-medium__white">{{ $t('task.heading') }}</h2>
+          <h2 class="heading-medium__outlined">{{ $t('task.heading') }}</h2>
         </div>
 
         <div class="task-section__item">
@@ -329,15 +321,15 @@
 
           <div class="task-section__info">
             <h4 class="about-section__title">
-              Создание маркетплейса в стиле Opensea:
+              {{ $t('task.title') }}
             </h4>
 
             <p class="task-section__text">
-              Реализация генератора NFT
+              {{ $t('task.text1') }}
             </p>
 
             <p class="task-section__text">
-              Смарт контракт для токена ERC20
+              {{ $t('task.text2') }}
             </p>
           </div>
         </div>
@@ -347,18 +339,12 @@
     <section class="main__section audience-section" id="audience">
       <div class="audience-section__container">
         <div class="audience-section__heading heading-medium">
-          <h2 class="heading-medium__white">
-            Целевая <br/>
-            аудитория
-          </h2>
-          <h2 class="heading-medium__outlined">
-            Целевая <br/>
-            аудитория
-          </h2>
+          <h2 class="heading-medium__white" v-html="$t('audience.heading')"></h2>
+          <h2 class="heading-medium__outlined" v-html="$t('audience.heading')"></h2>
         </div>
 
         <div class="audience-section__subtitle">
-          Мы ищем разработчиков с опытом в:
+          {{ $t('audience.subtitle') }}
         </div>
 
         <div class="audience-section__row">
@@ -402,8 +388,8 @@
     <section class="main__section program-section" id="program">
       <div class="program-section__container">
         <div class="audience-section__heading heading-medium">
-          <h2 class="heading-medium__white">Программа</h2>
-          <h2 class="heading-medium__outlined">Программа</h2>
+          <h2 class="heading-medium__white">{{ $t('program.heading') }}</h2>
+          <h2 class="heading-medium__outlined">{{ $t('program.heading') }}</h2>
         </div>
 
         <div class="program-section__list">
@@ -413,17 +399,16 @@
                 25
               </p>
               <p class="program-section__month">
-                июня
+                {{ $t('program.month') }}
               </p>
             </div>
 
             <div class="program-section__info">
               <h5 class="program-section__title">
-                Старт Хакатона
+                {{ $t('program.title1') }}
               </h5>
               <p class="program-section__subtitle">
-                Приветственное слово от организаторов.
-                Образовательные воркшопы.
+                {{ $t('program.text1') }}
               </p>
             </div>
           </div>
@@ -434,16 +419,16 @@
                 26
               </p>
               <p class="program-section__month">
-                июня
+                {{ $t('program.month') }}
               </p>
             </div>
 
             <div class="program-section__info">
               <h5 class="program-section__title">
-                Работа над решением
+                {{ $t('program.title2') }}
               </h5>
               <p class="program-section__subtitle">
-                Время для разработки решения задачи.
+                {{ $t('program.text2') }}
               </p>
             </div>
           </div>
@@ -454,17 +439,16 @@
                 27
               </p>
               <p class="program-section__month">
-                июня
+                {{ $t('program.month') }}
               </p>
             </div>
 
             <div class="program-section__info">
               <h5 class="program-section__title">
-                Презентация решений и интервью
+                {{ $t('program.title3') }}
               </h5>
               <p class="program-section__subtitle">
-                Участники презентуют свои решения и проходят интервью с
-                представителями JAS Nur-Sultan.
+                {{ $t('program.text3') }}
               </p>
             </div>
           </div>
@@ -475,16 +459,16 @@
                 28
               </p>
               <p class="program-section__month">
-                июня
+                {{ $t('program.month') }}
               </p>
             </div>
 
             <div class="program-section__info">
               <h5 class="program-section__title">
-                Финал
+                {{ $t('program.title4') }}
               </h5>
               <p class="program-section__subtitle">
-                Объявление победителей. Закрытие хакатона.
+                {{ $t('program.text4') }}
               </p>
             </div>
           </div>
@@ -495,8 +479,8 @@
     <section class="main__section organizers-section" id="organizers">
       <div class="organizers-section__container">
         <div class="organizers-section__heading heading-medium">
-          <h2 class="heading-medium__white">Организаторы</h2>
-          <h2 class="heading-medium__outlined">Организаторы</h2>
+          <h2 class="heading-medium__white">{{ $t('organizers.heading') }}</h2>
+          <h2 class="heading-medium__outlined">{{ $t('organizers.heading') }}</h2>
         </div>
 
         <div class="organizers-section__row">
@@ -508,9 +492,7 @@
             </div>
 
             <div class="organizers-section__text">
-              Seedstars – швейцарская группа компаний, которая работает в сфере стартапов на развивающихся рынках, и
-              ставит своей целью улучшение жизни людей через технологии и развитие предпринимательства, связывая
-              заинтересованные стороны и инвестируя в высокопроизводительные стартапы.
+              {{ $t('organizers.text1') }}
             </div>
 
             <div
@@ -519,7 +501,7 @@
               <svg class="organizers-section__icon" width="24" height="24">
                 <use href="../assets/img/icons.svg#square-dot"></use>
               </svg>
-              <span>Женева, Швейцария</span>
+              <span>{{ $t('organizers.address1') }}</span>
             </div>
           </div>
 
@@ -548,19 +530,7 @@
               Jas Nur-Sultan
             </div>
 
-            <div class="organizers-section__text">
-              Компания JAS Nur-Sultan является молодой венчурно-инвестиционной
-              компанией с регистрацией в юрисдикции Международного Финансового Центра "Astana" (МФЦА), а также является
-              участницей экосистемы Назарбаев
-              Университета.
-              <br/><br/>
-
-              Основная деятельность компании заключается в проактивном поиске
-              стартапов по линии нетворкинга и различных инкубационных и
-              акселерационных программ в Казахстане с последующим
-              финансированием перспективных, масштабируемых и быстрорастущих
-              стартапов.
-            </div>
+            <div class="organizers-section__text" v-html="$t('organizers.text2')"></div>
 
             <div
               class="organizers-section__address organizers-section__address--second"
@@ -568,7 +538,7 @@
               <svg class="organizers-section__icon" width="24" height="24">
                 <use href="../assets/img/icons.svg#square-dot"></use>
               </svg>
-              <span>Нур-Султан, Казахстан</span>
+              <span>{{ $t('organizers.address2') }}</span>
             </div>
           </div>
 
@@ -593,14 +563,8 @@
     <section class="main__section place-section" id="place">
       <div class="place-section__container">
         <div class="place-section__heading heading-medium">
-          <h2 class="heading-medium__white">
-            Место <br/>
-            проведения
-          </h2>
-          <h2 class="heading-medium__outlined">
-            Место <br/>
-            проведения
-          </h2>
+          <h2 class="heading-medium__white" v-html="$t('place.heading')"></h2>
+          <h2 class="heading-medium__outlined" v-html="$t('place.heading')"></h2>
         </div>
 
         <div class="place-section__btn-group">
@@ -609,14 +573,14 @@
             @click="chooseCity('Almaty')"
             :class="{ 'button--grey': city !== 'Almaty' }"
           >
-            Алматы
+            {{ $t('place.almaty') }}
           </button>
           <button
             class="place-section__btn button"
             @click="chooseCity('Nur-Sultan')"
             :class="{ 'button--grey': city !== 'Nur-Sultan' }"
           >
-            Нур-Султан
+            {{ $t('place.astana') }}
           </button>
         </div>
       </div>
@@ -635,12 +599,7 @@
             <svg width="19" height="18">
               <use href="../assets/img/icons.svg#map-pin"></use>
             </svg>
-            <span>
-              г. Алматы, <br/>
-              проспект Аль-Фараби 77/7, <br/>
-              Башня Есентай, <br/>
-              этаж 8, Level 8, конференц-зал «Медеу»
-            </span>
+            <span v-html="$t('place.address1')"></span>
           </div>
         </div>
       </div>
@@ -659,11 +618,7 @@
             <svg width="19" height="18">
               <use href="../assets/img/icons.svg#map-pin"></use>
             </svg>
-            <span>
-              г. Нур-Султан <br/>
-              ул. Мангилик ел, 55/13 Блок С2-2 <br/>
-              Этаж 3, кабинет 3-11
-            </span>
+            <span v-html="$t('place.address2')"></span>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import i18n from "./config/i18n";
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -6,7 +8,7 @@ export default {
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: ''},
-      {name:"facebook-domain-verification", content:"wf7yf1x8vqap2klo39oxe4h0vo1pgq" }
+      {name: "facebook-domain-verification", content: "wf7yf1x8vqap2klo39oxe4h0vo1pgq"}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
@@ -25,7 +27,30 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'ru',
+            name: 'Russian'
+          },
+          {
+            code: 'kz',
+            name: 'Kazakh'
+          },
+          {
+            code: 'en',
+            name: 'English'
+          }
+        ],
+        defaultLocale: 'ru',
+        vueI18n: i18n,
+        strategy: 'prefix_except_default',
+      }
+    ]
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -42,6 +67,18 @@ export default {
       autoPageView: true,
       disabled: false
     }],
+
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id: '81001639',
+        // webvisor: true,
+        clickmap:true,
+        // useCDN:false,
+        trackLinks:true,
+        accurateTrackBounce:true,
+      }
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
