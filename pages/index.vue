@@ -626,14 +626,14 @@
       </div>
     </section>
 
-    <noscript>
-      <img
-        height="1"
-        width="1"
-        style="display:none"
-        src="https://www.facebook.com/tr?id=820774322176569&ev=PageView&noscript=1"
-      />
-    </noscript>
+    <!--    <noscript>-->
+    <!--      <img-->
+    <!--        height="1"-->
+    <!--        width="1"-->
+    <!--        style="display:none"-->
+    <!--        src="https://www.facebook.com/tr?id=820774322176569&ev=PageView&noscript=1"-->
+    <!--      />-->
+    <!--    </noscript>-->
   </main>
 </template>
 
@@ -665,8 +665,7 @@ export default {
     },
     participate() {
       this.$fb.track('track', 'Lead')
-      window.location.href = 'https://form.jotform.com/211601184592451'
-
+      window.open('https://form.jotform.com/211601184592451', '_blank');
     }
   },
   mounted() {

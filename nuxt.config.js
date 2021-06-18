@@ -20,7 +20,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: "~/plugins/defaultPlugin", mode: "client"},
+    {src: "~/plugins/defaultPlugin", mode: "client"}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -61,25 +61,36 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
 
-    ['nuxt-facebook-pixel-module', {
-      track: 'PageView',
-      pixelId: '820774322176569',
-      autoPageView: true,
-      disabled: false
-    }],
+    '@nuxtjs/gtm',
+
+    [
+      'nuxt-facebook-pixel-module',
+      {
+        track: 'PageView',
+        pixelId: '820774322176569',
+        autoPageView: true,
+        disabled: false
+      }
+    ],
 
     [
       '@nuxtjs/yandex-metrika',
       {
         id: '81001639',
         webvisor: true,
-        clickmap:true,
+        clickmap: true,
         // useCDN:false,
-        trackLinks:true,
-        accurateTrackBounce:true,
+        trackLinks: true,
+        accurateTrackBounce: true,
       }
     ],
   ],
+
+  gtm: {
+    id: 'GTM-T8ZPG3M',
+    debug: true,
+    enabled: true
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
