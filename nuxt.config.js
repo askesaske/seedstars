@@ -63,15 +63,22 @@ export default {
 
     '@nuxtjs/gtm',
 
+    // [
+    //   'nuxt-facebook-pixel-module',
+    //   {
+    //     track: 'PageView',
+    //     pixelId: '820774322176569',
+    //     autoPageView: true,
+    //     disabled: false
+    //   }
+    // ],
+
     [
-      'nuxt-facebook-pixel-module',
-      {
-        track: 'PageView',
-        pixelId: '820774322176569',
-        autoPageView: true,
-        disabled: false
-      }
-    ],
+      '@dukanify/nuxt-multiple-facebook-pixel-module', {
+      track: 'PageView',
+      pixelId: ['820774322176569', '489135002377309'],
+      disabled: false
+    }],
 
     [
       '@nuxtjs/yandex-metrika',
