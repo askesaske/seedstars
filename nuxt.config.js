@@ -7,8 +7,11 @@ export default {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''},
-      {name: "facebook-domain-verification", content: "wf7yf1x8vqap2klo39oxe4h0vo1pgq"}
+      {hid: 'description', name: 'description', content: 'Blockchain Hackathon'},
+      {name: 'og:title', content: 'Seedstars'},
+      {name: 'og:description', content: 'Blockchain Hackathon'},
+      {name: 'og:image', content: '/favicon.ico'},
+      {name: "facebook-domain-verification", content: "wf7yf1x8vqap2klo39oxe4h0vo1pgq"},
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
@@ -122,5 +125,7 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  // ssr: false
 }
